@@ -1,6 +1,10 @@
+//Arrays
 const random = [39, 43, "Pizza", "E", "Sandwich", 21];
 const newarray = pop()
+const arrayElements = join("/");
+const places = ["LA", "NY", "SF", "MN"];
 
+//Console log so we can see what the code is doing in the console.
 console.log(random);
 console.log("DEBUG Print Array: " + random);
 push("Car");
@@ -9,6 +13,10 @@ pop();
 console.log("DEBUG Pop: " + newarray);
 toString()
 console.log("DEBUG ToString: " + newarray);
+join()
+console.log("DEBUG Join: " + arrayElements);
+concat(places)
+console.log("DEBUG Concat: " + random);
 
 
 
@@ -45,19 +53,24 @@ function toString() {
    return space;
 }
 
-function join(item) {
-   let choice = item;
-   let joinarray = [];
+//Seperate the elements in the array using the method you want. Example if you use / then the array would output with / seperating it. 
+function join (seprator = " ") {
+    let result = "";
+    for(var a = 0; a < random.length; a++) {
+        if (result) {
+            result += seprator;
+        }
+        result += random[a];
+    }
+    return result;
+};
 
-   for(let a = 0; a < random.length; a++) {
-    joinarray[a] = random[a];
-    if(a > 0)
-       choice += item;
+//Creates a  new array that can hold elements from other arrays and join them together and into one array. 
+function concat(array2) {
+   
+
+   for(var a = 0; a < array2.length; a++) {
+         push(array2[a])
    }
-
-   choice += random[a];
-}
-
-function concat() {
 
 }
